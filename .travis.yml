@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t villuriram/docker-react -f Dockerfile.dev .
+
+scritp:
+  - docker run villuriram/docker-react npm run test -- --coverage
