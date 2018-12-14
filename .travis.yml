@@ -11,6 +11,7 @@ before_install:
 script:
   - docker run villuriram/docker-react npm run test -- --coverage
 
+
 deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
